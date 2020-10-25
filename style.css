@@ -1,0 +1,28 @@
+html body {
+	padding: 0;
+	margin: 0;
+	background-color: gray;
+}
+
+#board {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+
+.btn {
+	float: left;
+	border: none;
+	width: 20px;
+	height: 20px;
+	padding: 0;
+	margin: 1px;
+	background-color: black;
+	color: black;
+}
+
+.enabled {
+	background-color: white;
+}
