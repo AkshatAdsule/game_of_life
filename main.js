@@ -16,3 +16,9 @@ for (let i = 0; i < rows; i++) {
 $(".btn").click(function (e) {
 	toggleButton(e.target.id);
 });
+
+// game start
+$(window).keydown(function (e) {
+	console.log(e);
+	e.keyCode === 13 && console.log("start");
+});
