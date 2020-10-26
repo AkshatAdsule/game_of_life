@@ -7,8 +7,20 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<div class="control-bar">
+			<nav>
+				<button class="btn-nav" id="start">Start</button>
+				<input
+					id="interval-input"
+					type="number"
+					placeholder="Interval (ms)"
+					value="1000"
+				/>
+				<a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Help</a>
+			</nav>
+		</div>
 		<div id="board"></div>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="main.min.js"></script>
+	<script src="main.js"></script>
 </html>
