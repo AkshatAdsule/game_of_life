@@ -1,5 +1,5 @@
 // create board
-const rows = Math.floor($(window).height() / 22);
+const rows = Math.floor(($(window).height() * 0.95) / 22);
 const columns = Math.floor($(window).width() / 22);
 for (let i = 0; i < rows; i++) {
 	for (let j = 0; j < columns; j++) {
@@ -72,6 +72,6 @@ $(".btn").click(function (e) {
 });
 
 // game start
-$(window).keydown(function (e) {
-	e.keyCode === 13 && setInterval(start, 100);
+$("#start").click(function (e) {
+	setInterval(start, 10);
 });
