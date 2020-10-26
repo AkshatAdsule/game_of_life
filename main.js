@@ -38,15 +38,12 @@ function tick(id) {
 	// rules
 	if (alive) {
 		if (alive_neighbors.length === 2 || alive_neighbors.length === 3) {
-			console.log(id + " will be alive");
 			return `<button class="btn enabled" id="${id}"> </button>`;
 		} else {
-			console.log(id + " will be dead");
 			return `<button class="btn" id="${id}"> </button>`;
 		}
 	} else {
 		if (alive_neighbors.length === 3) {
-			console.log(id + " will be alive");
 			return `<button class="btn enabled" id="${id}"> </button>`;
 		} else {
 			return `<button class="btn" id="${id}"> </button>`;
@@ -66,7 +63,6 @@ function start() {
 	$(".btn").each(function (i, obj) {
 		newButtons.push(tick(obj.id));
 	});
-	console.log(newButtons);
 	drawBoard(newButtons);
 }
 
@@ -77,5 +73,5 @@ $(".btn").click(function (e) {
 
 // game start
 $(window).keydown(function (e) {
-	e.keyCode === 13 && start();
+	e.keyCode === 13 && setInterval(start, 100);
 });
