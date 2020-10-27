@@ -7,6 +7,8 @@ for (let i = 0; i < rows; i++) {
 	}
 }
 
+let tickInterval;
+
 // methods
 function toggleButton(id) {
 	$(`#${id}`).toggleClass("enabled");
@@ -73,5 +75,9 @@ $(".btn").click(function (e) {
 
 // game start
 $("#start").click(function (e) {
-	setInterval(start, 10);
+	tickInterval = setInterval(start, 10);
+});
+
+$("#stop").click(function () {
+	clearInterval(tickInterval);
 });
