@@ -7,7 +7,8 @@ for (let i = 0; i < rows; i++) {
 	}
 }
 
-let tickInterval;
+let ticker;
+let tickInterval = 1000;
 
 // methods
 function toggleButton(id) {
@@ -73,11 +74,15 @@ $(".btn").click(function (e) {
 	toggleButton(e.target.id);
 });
 
+//input listner
+
 // game start
 $("#start").click(function (e) {
-	tickInterval = setInterval(start, 10);
+	tickInterval = $("#interval-input").val();
+	console.log(tickInterval);
+	ticker = setInterval(start, 10);
 });
 
 $("#stop").click(function () {
-	clearInterval(tickInterval);
+	clearInterval(ticker);
 });
